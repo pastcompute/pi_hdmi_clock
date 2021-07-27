@@ -36,8 +36,7 @@ sudo systemctl disable man-db.timer
 
 # Disable journaling? need to do from another O/S because we need to tune tune2fs on unmounted or r/o filesystem
 
-# Use < < - do avoid escaping $vars
-cat > ~/.xserverrc <<-EOF
+cat > ~/.xserverrc <<"EOF"
 #!/bin/sh
 #Start an X server with power management disabled so that the screen never goes blank.
 exec /usr/bin/X -s 0 -dpms -nolisten tcp "$@"
